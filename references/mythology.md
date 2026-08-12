@@ -1,4 +1,3 @@
-</> Markdown
 # mythology
 
 > *stories older than memory.*
