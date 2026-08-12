@@ -85,13 +85,21 @@
     "Nel silenzio, anche le ombre hanno memoria.",
     "Perharps nothing is truly lost. Perhaps it only changes its name."
 ];
-
+   let currentFragment = 0;
+        
         function anotherFragment() {
-            const random = Math.floor(Math.random() * fragments.length);
+            let random;
+
+     do { 
+         random = Math.floor(Math.random() * fragments.length);
+     } while (random === currentFragment);
+
+            currentFragment = random;
+            
             document.getElementById("fragment").textContent = fragments[random];
 
             const number = String(random + 1).padStart(2, "0");
-            document.getElementById("counter").textContent = "fragment " + number + " / 03";
+            document.getElementById("counter").textContent = "fragment " + number + " / 10";
         }
     </script>
 
