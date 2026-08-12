@@ -1,16 +1,27 @@
-</> Markdown
-# notes
+# Notes
 
-> *observations, ideas and miscellaneous notes.*
-
-A collection of thoughts, observations and things worth remembering.
+> private observations, unfinished thoughts, and things worth remembering.
 
 ---
 
-### index
+## I. On Silence
 
-*the archive is currently empty.*
+A note concerning the things that remain
+when there is nothing left to say.
+
+## II. On Memory
+
+A brief observation on memory,
+its distortions, and the things it refuses to bury.
+
+## III. On Becoming
+
+A reflection on identity, change,
+and the strange distance between who we were
+and who we become.
 
 ---
 
-*not everything needs to become something.*
+> *Some thoughts are not meant to be conclusions.*
+
+**Asteren D'Aubray**
