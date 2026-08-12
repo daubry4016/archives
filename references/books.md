@@ -1,4 +1,3 @@
-</> Markdown
 # books
 
 > *books that left something behind.*
