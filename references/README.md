@@ -1,4 +1,3 @@
-</> Markdown
 # references
 
 > *things worth remembering.*
