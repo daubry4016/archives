@@ -1,4 +1,3 @@
-</> Markdown
 # philosophies
 
 > *questions without final answers.*
