@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragments — Asteren D'Aubray</title>
+</head>
+
+<body>
+
+    <h1>fragments</h1>
+
+    <p>an archive of scattered thoughts.</p>
+
+    <hr>
+
+    <p id="fragment">carne velata, verbum vetus in medullis resonat.</p>
+
+    <button onclick="anotherFragment()">another fragment</button>
+
+    <script>
+        const fragments = [
+            "carne velata, verbum vetus in medullis resonat.",
+            "Some thoughts are easier to preserve than to explain.",
+            "Condamnée au sol monstrueux qu’est de t’aimer."
+        ];
+
+        function anotherFragment() {
+            const random = Math.floor(Math.random() * fragments.length);
+            document.getElementById("fragment").textContent = fragments[random];
+        }
+    </script>
+
+</body>
+</html>
