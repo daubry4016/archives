@@ -1,4 +1,3 @@
-</> Markdown
 # language
 
 > *words carry what silence cannot.*
