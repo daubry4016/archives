@@ -80,6 +80,9 @@
         function anotherFragment() {
             const random = Math.floor(Math.random() * fragments.length);
             document.getElementById("fragment").textContent = fragments[random];
+
+            const number = String(random + 1).padStart(2, "0");
+            document.getElementById("counter").textcontent = "fragment" + number + " / 03":
         }
     </script>
 
