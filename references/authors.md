@@ -1,4 +1,3 @@
-</> Markdown 
 # authors
 
 > *voices that left something behind.*
