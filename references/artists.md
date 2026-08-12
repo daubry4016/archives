@@ -1,4 +1,3 @@
-</> Markdown
 # artists
 
 > *images, forms and visions.*
