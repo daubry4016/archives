@@ -1,21 +1,43 @@
-# references
+# References
 
-> *things worth remembering.*
-
-A collection of authors, philosophies, books, artists and other sources of inspiration.
+> *names, works, languages, images, sounds, myths, ideas.*
 
 ---
 
-### index
+This is a collection of things that remained.
 
-* [authors](./authors.md)
-* [philosophies](./philosophies.md)
-* [books](./books.md)
-* [artists](./artists.md)
-* [music](./music.md)
-* [mythology](./mythology.md)
-* [language](./language.md)
+Authors whose voices endured.
+
+Books worth returning to.
+
+Images that refuse to disappear.
+
+Languages that carry what silence cannot.
+
+Music that survives the silence.
+
+Myths older than memory.
+
+And philosophies whose questions remain unanswered.
 
 ---
 
-*everything leaves a trace.*
+### Archive
+
+- [Authors](authors.md)
+- [Books](books.md)
+- [Artists](artists.md)
+- [Language](language.md)
+- [Music](music.md)
+- [Mythology](mythology.md)
+- [Philosophies](philosophies.md)
+
+---
+
+*not everything preserved here is understood.*
+
+*some things are simply remembered.*
+
+---
+
+[← return to the archive](../)
