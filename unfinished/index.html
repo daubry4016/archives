@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unfinished — Asteren D'Aubray</title>
+
+    <style>
+        body {
+            background: #050505;
+            color: #b8b8b8;
+            font-family: Georgia, serif;
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .limbo {
+            width: 90%;
+            max-width: 650px;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: normal;
+            letter-spacing: 8px;
+            opacity: 0.65;
+            margin-bottom: 60px;
+        }
+
+        #fragment {
+            min-height: 150px;
+            font-size: 19px;
+            line-height: 2;
+            font-style: italic;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+
+        #continue {
+            margin-top: 50px;
+            background: transparent;
+            border: none;
+            color: #777;
+            font-family: Georgia, serif;
+            font-size: 14px;
+            font-style: italic;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 2s ease;
+        }
+
+        #continue:hover {
+            color: #ddd;
+        }
+
+        #return {
+            display: block;
+            margin-top: 100px;
+            color: #555;
+            text-decoration: none;
+            font-size: 13px;
+            font-style: italic;
+            opacity: 0;
+            transition: opacity 3s ease;
+        }
+
+        #return:hover {
+            color: #aaa;
+        }
+
+        .visible {
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="limbo">
+
+    <h1>UNFINISHED</h1>
+
+    <div id="fragment"></div>
+
+    <button id="continue" onclick="nextFragment()">
+        continue
+    </button>
+
+    <a id="return" href="../">
+        ← return to the archive
+    </a>
+
+</div>
+
+<script>
+
+    const fragments = [
+
+        "there is no final page.",
+
+        "the sentence continues somewhere you cannot reach.",
+
+        "[ this entry has no conclusion ]",
+
+        "you have already read this.",
+
+        "perhaps this was supposed to end here.",
+
+        "the author stopped writing before the thought could become complete.",
+
+        "there is something after this.",
+
+        "there is always something after this.",
+
+        "...",
+
+        "you were not supposed to find this.",
+
+        "this fragment has been waiting longer than the others.",
+
+        "do not look for the ending.",
+
+        "the ending was removed.",
+
+        "what remains is enough.",
+
+        "this is where it should have ended.",
+
+        "but it didn't."
+
+    ];
+
+    let currentFragment = -1;
+
+    function showFragment() {
+
+        const fragment = document.getElementById("fragment");
+        const continueButton = document.getElementById("continue");
+        const returnLink = document.getElementById("return");
+
+        let random;
+
+        do {
+            random = Math.floor(Math.random() * fragments.length);
+        } while (random === currentFragment);
+
+        currentFragment = random;
+
+        fragment.classList.remove("visible");
+
+        setTimeout(() => {
+            fragment.textContent = fragments[random];
+            fragment.classList.add("visible");
+        }, 1000);
+
+        continueButton.classList.add("visible");
+
+        if (currentFragment >= 0) {
+            returnLink.classList.add("visible");
+        }
+    }
+
+    function nextFragment() {
+        showFragment();
+    }
+
+    setTimeout(() => {
+        showFragment();
+    }, 1500);
+
+</script>
+
+</body>
+</html>
