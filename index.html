@@ -8,86 +8,150 @@
 
     <style>
         body {
-            background: #0b0b0b;
+            background: #070707;
             color: #d6d1c8;
             font-family: Georgia, serif;
-            text-align: center;
             margin: 0;
-            padding: 100px 20px;
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: normal;
-            letter-spacing: 6px;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-style: italic;
-            opacity: 0.6;
-            margin-bottom: 70px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .archive {
+            width: 90%;
+            max-width: 650px;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            font-size: 38px;
+            font-weight: normal;
+            letter-spacing: 9px;
+            margin: 0 0 18px;
+        }
+
+        .intro {
+            font-style: italic;
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.5;
             max-width: 500px;
-            margin: auto;
+            margin: 0 auto;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #242424;
+            width: 180px;
+            margin: 55px auto;
+        }
+
+        .entries {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            text-align: left;
         }
 
         .entry {
             display: block;
             color: #d6d1c8;
             text-decoration: none;
-            padding: 18px;
-            margin: 12px 0;
-            border-bottom: 1px solid #292929;
-            letter-spacing: 2px;
-            transition: 0.3s;
+            padding: 5px 0;
+            transition: 0.5s ease;
         }
 
         .entry:hover {
-            opacity: 0.5;
-            letter-spacing: 4px;
+            opacity: 0.45;
+            padding-left: 10px;
         }
 
-        .number {
+        .name {
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+
+        .description {
+            font-size: 13px;
+            font-style: italic;
             opacity: 0.4;
-            margin-right: 12px;
+            margin-top: 5px;
+        }
+
+        .unfinished {
+            margin-top: 15px;
+        }
+
+        .warning {
+            font-size: 12px;
+            opacity: 0.3;
+            margin-top: 5px;
+        }
+
+        .footer {
+            margin-top: 80px;
+            font-size: 12px;
+            font-style: italic;
+            opacity: 0.25;
         }
     </style>
 </head>
 
 <body>
 
+<div class="archive">
+
     <h1>THE ARCHIVE</h1>
 
-    <div class="subtitle">
-        fragments of what was left behind.
+    <div class="intro">
+        an incomplete collection<br>
+        of what remains.
     </div>
 
-    <div class="archive">
+    <hr>
+
+    <div class="entries">
 
         <a class="entry" href="fragments/">
-            <span class="number">I.</span>
-            FRAGMENTS
+            <div class="name">fragments</div>
+            <div class="description">
+                scattered thoughts, preserved without order.
+            </div>
         </a>
 
         <a class="entry" href="references/">
-            <span class="number">II.</span>
-            REFERENCES
+            <div class="name">references</div>
+            <div class="description">
+                names, ideas, and voices that remain.
+            </div>
         </a>
 
         <a class="entry" href="notes/">
-            <span class="number">III.</span>
-            NOTES
+            <div class="name">notes</div>
+            <div class="description">
+                private observations and things worth remembering.
+            </div>
         </a>
 
-        <a class="entry" href="unfinished/">
-            <span class="number">IV.</span>
-            UNFINISHED
+        <a class="entry unfinished" href="unfinished/">
+            <div class="name">unfinished</div>
+            <div class="description">
+                things that were never completed.
+            </div>
+            <div class="warning">
+                there is no final page.
+            </div>
         </a>
 
     </div>
+
+    <div class="footer">
+        some things remain because they were never meant to disappear.
+    </div>
+
+</div>
 
 </body>
 </html>
