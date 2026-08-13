@@ -1,18 +1,38 @@
-</> Markdown
-# unfinished
+# Unfinished
 
-> *things that were started, but never quite finished.*
+> there is no final page.
 
-A collection of abandoned projects, incomplete ideas and things left somewhere between beginning and becoming.
+Some things were never completed.
 
----
+Some were abandoned.
 
-### index
+Some were forgotten before they could become whole.
 
-* [projects](./projects.md)
-* [ideas](./ideas.md)
-* [drafts](./drafts.md)
+This is where they remain.
 
 ---
 
-*unfinished does not mean forgotten.*
+## I.
+
+There are no conclusions here.
+
+Only continuations.
+
+## II.
+
+If an entry appears unfinished,
+perhaps it is.
+
+Perhaps it was never meant to be finished.
+
+## III.
+
+Do not look for the last page.
+
+There isn't one.
+
+---
+
+> *You have reached the unfinished archive.*
+
+**Asteren D'Aubray**
