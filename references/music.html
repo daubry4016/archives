@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Music — Asteren D'Aubray</title>
+
+<style>
+    body {
+        background: #0b0b0b;
+        color: #d6d1c8;
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 80px 20px;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 38px;
+        font-weight: normal;
+        letter-spacing: 6px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-style: italic;
+        opacity: 0.5;
+    }
+
+    .category {
+        margin-bottom: 50px;
+    }
+
+    .category-name {
+        font-size: 13px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.4;
+        margin-bottom: 18px;
+    }
+
+    .artist {
+        display: block;
+        width: 100%;
+        background: transparent;
+        color: #d6d1c8;
+        border: 0;
+        border-bottom: 1px solid #242424;
+        padding: 16px 0;
+        font-family: Georgia, serif;
+        font-size: 18px;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .artist:hover {
+        color: white;
+        padding-left: 8px;
+    }
+
+    #details {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    #details.visible {
+        display: block;
+        opacity: 1;
+    }
+
+    .back {
+        display: inline-block;
+        margin-bottom: 45px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.45;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .back:hover {
+        opacity: 1;
+    }
+
+    .music-name {
+        font-size: 34px;
+        font-weight: normal;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+    }
+
+    .field {
+        font-style: italic;
+        opacity: 0.5;
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 12px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.4;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        color: #bdb8af;
+        font-size: 16px;
+        line-height: 1.9;
+        margin-bottom: 45px;
+    }
+
+    .works {
+        margin-bottom: 50px;
+    }
+
+    .work {
+        padding: 14px 0;
+        border-bottom: 1px solid #242424;
+        font-size: 16px;
+        color: #aaa59d;
+    }
+
+    .themes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .theme {
+        border: 1px solid #292929;
+        padding: 8px 12px;
+        font-size: 13px;
+        opacity: 0.6;
+    }
+
+    .related {
+        color: #aaa59d;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 45px;
+    }
+
+    .archive-return {
+        display: block;
+        text-align: center;
+        margin-top: 80px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.4;
+        transition: 0.3s;
+    }
+
+    .archive-return:hover {
+        opacity: 1;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<header>
+    <h1>MUSIC</h1>
+
+    <div class="subtitle">
+        sounds that remain after the silence.
+    </div>
+</header>
+
+
+<!-- MUSIC CATALOG -->
+
+<div id="catalog">
+
+    <div class="category">
+        <div class="category-name">Classical</div>
+
+        <button class="artist" onclick="showMusic('chopin')">
+            Frédéric Chopin
+        </button>
+
+        <button class="artist" onclick="showMusic('debussy')">
+            Claude Debussy
+        </button>
+
+        <button class="artist" onclick="showMusic('satie')">
+            Erik Satie
+        </button>
+
+        <button class="artist" onclick="showMusic('bach')">
+            Johann Sebastian Bach
+        </button>
+
+        <button class="artist" onclick="showMusic('beethoven')">
+            Ludwig van Beethoven
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Romantic</div>
+
+        <button class="artist" onclick="showMusic('tchaikovsky')">
+            Pyotr Ilyich Tchaikovsky
+        </button>
+
+        <button class="artist" onclick="showMusic('schubert')">
+            Franz Schubert
+        </button>
+
+        <button class="artist" onclick="showMusic('schumann')">
+            Robert Schumann
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Modern & Contemporary</div>
+
+        <button class="artist" onclick="showMusic('arnalds')">
+            Ólafur Arnalds
+        </button>
+
+        <button class="artist" onclick="showMusic('richter')">
+            Max Richter
+        </button>
+
+        <button class="artist" onclick="showMusic('rani')">
+            Hania Rani
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Songs & Artists</div>
+
+        <button class="artist" onclick="showMusic('la-vie-en-rose')">
+            La Vie en Rose
+        </button>
+
+        <button class="artist" onclick="showMusic('radiohead')">
+            Radiohead
+        </button>
+
+        <button class="artist" onclick="showMusic('florence')">
+            Florence + the Machine
+        </button>
+
+        <button class="artist" onclick="showMusic('mitski')">
+            Mitski
+        </button>
+
+        <button class="artist" onclick="showMusic('smiths')">
+            The Smiths
+        </button>
+    </div>
+
+</div>
+
+
+<!-- MUSIC DETAILS -->
+
+<div id="details">
+
+    <a class="back" onclick="returnToMusic()">
+        ← return to music
+    </a>
+
+    <div class="music-name" id="name"></div>
+
+    <div class="field" id="field"></div>
+
+    <div class="section-title">about</div>
+
+    <div class="description" id="description"></div>
+
+    <div class="section-title">works & songs</div>
+
+    <div class="works" id="works"></div>
+
+    <div class="section-title">themes</div>
+
+    <div class="themes" id="themes"></div>
+
+    <div class="section-title">related threads</div>
+
+    <div class="related" id="related"></div>
+
+</div>
+
+
+<a class="archive-return" href="index.html">
+    ← return to the archive
+</a>
+```
+
+</div>
+
+<script>
+
+const music = {
+
+    "chopin": {
+        name: "Frédéric Chopin",
+        field: "composer · pianist · Romanticism",
+        description: "A Polish-French composer and pianist whose music is closely associated with the piano. His works are known for intimacy, lyricism, technical complexity and an intense sense of emotional expression.",
+        works: [
+            "Nocturnes",
+            "Preludes",
+            "Ballades"
+        ],
+        themes: ["melancholy", "intimacy", "piano", "romanticism", "solitude"],
+        related: "Music as an interior language: quiet, intimate and capable of expressing states that resist ordinary speech."
+    },
+
+    "debussy": {
+        name: "Claude Debussy",
+        field: "composer · Impressionism",
+        description: "A French composer whose music transformed ideas of harmony, color and atmosphere. His compositions often create impressions rather than following straightforward musical narratives.",
+        works: [
+            "Clair de Lune",
+            "Prélude à l'après-midi d'un faune",
+            "La Mer"
+        ],
+        themes: ["atmosphere", "dreams", "nature", "light", "impressionism"],
+        related: "Sound as atmosphere: music that suggests images, memories and sensations rather than explaining them."
+    },
+
+    "satie": {
+        name: "Erik Satie",
+        field: "composer · pianist · modernism",
+        description: "A French composer known for his minimalist, unconventional and often quietly ironic approach to music. His work influenced later modernist and experimental traditions.",
+        works: [
+            "Gymnopédies",
+            "Gnossiennes",
+            "Je te veux"
+        ],
+        themes: ["minimalism", "irony", "silence", "modernism", "simplicity"],
+        related: "The power of restraint, repetition and silence, where simplicity becomes its own kind of atmosphere."
+    },
+
+    "bach": {
+        name: "Johann Sebastian Bach",
+        field: "composer · organist · Baroque",
+        description: "A German composer whose works represent one of the central achievements of Baroque music. His compositions combine mathematical structure, intricate counterpoint and expressive depth.",
+        works: [
+            "The Well-Tempered Clavier",
+            "Goldberg Variations",
+            "Cello Suites"
+        ],
+        themes: ["structure", "counterpoint", "devotion", "order", "mathematics"],
+        related: "The meeting of structure and emotion: an architecture of sound in which order itself becomes expressive."
+    },
+
+    "beethoven": {
+        name: "Ludwig van Beethoven",
+        field: "composer · pianist · Classical · Romantic",
+        description: "A German composer whose work helped bridge the Classical and Romantic eras. His music is often associated with struggle, transformation, intensity and individual expression.",
+        works: [
+            "Symphony No. 5",
+            "Moonlight Sonata",
+            "Symphony No. 9"
+        ],
+        themes: ["struggle", "transformation", "freedom", "fate", "individuality"],
+        related: "The individual confronting limitation and transforming conflict into creation."
+    },
+
+    "tchaikovsky": {
+        name: "Pyotr Ilyich Tchaikovsky",
+        field: "composer · Romanticism",
+        description: "A Russian composer whose emotionally expressive music includes symphonies, concertos, operas and ballets. His works frequently move between tenderness, drama and overwhelming intensity.",
+        works: [
+            "Swan Lake",
+            "The Nutcracker",
+            "Symphony No. 6 — Pathétique"
+        ],
+        themes: ["emotion", "tragedy", "beauty", "longing", "drama"],
+        related: "Beauty intensified by melancholy, with emotional contrasts that move between tenderness and tragedy."
+    },
+
+    "schubert": {
+        name: "Franz Schubert",
+        field: "composer · songwriter · Romanticism",
+        description: "An Austrian composer celebrated for his songs, chamber music and symphonies. His music frequently combines lyrical beauty with a profound awareness of mortality and transience.",
+        works: [
+            "Winterreise",
+            "Unfinished Symphony",
+            "Ave Maria"
+        ],
+        themes: ["mortality", "journey", "melancholy", "beauty", "transience"],
+        related: "The journey through beauty and impermanence, where music becomes a record of passing time."
+    },
+
+    "schumann": {
+        name: "Robert Schumann",
+        field: "composer · critic · Romanticism",
+        description: "A German Romantic composer whose music often reflects literary ideas, shifting moods and the relationship between music and the imagination.",
+        works: [
+            "Kinderszenen",
+            "Carnaval",
+            "Dichterliebe"
+        ],
+        themes: ["literature", "imagination", "emotion", "romanticism", "memory"],
+        related: "Music and literature meeting in the imagination, where compositions can feel like fragments of an unwritten story."
+    },
+
+    "arnalds": {
+        name: "Ólafur Arnalds",
+        field: "composer · producer · contemporary",
+        description: "An Icelandic composer and multi-instrumentalist whose work combines piano, strings, electronic textures and ambient sound into intimate contemporary compositions.",
+        works: [
+            "Near Light",
+            "Saman",
+            "re:member"
+        ],
+        themes: ["memory", "silence", "atmosphere", "minimalism", "modernity"],
+        related: "Contemporary music as an architecture of quiet spaces, where electronic and acoustic sounds preserve fragments of emotion."
+    },
+
+    "richter": {
+        name: "Max Richter",
+        field: "composer · contemporary classical",
+        description: "A German-British composer whose work combines classical composition with minimalism and electronic music. His compositions frequently engage with memory, time, sleep and human experience.",
+        works: [
+            "On the Nature of Daylight",
+            "Sleep",
+            "The Blue Notebooks"
+        ],
+        themes: ["memory", "time", "sleep", "loss", "reflection"],
+        related: "Music as a place where memory and time overlap, preserving emotional traces long after an event has passed."
+    },
+
+    "rani": {
+        name: "Hania Rani",
+        field: "composer · pianist · singer · contemporary",
+        description: "A Polish composer and pianist whose music combines piano, electronic textures and atmospheric arrangements, creating intimate spaces between classical and contemporary sound.",
+        works: [
+            "Glass",
+            "F Major",
+            "Eden"
+        ],
+        themes: ["intimacy", "silence", "nature", "reflection", "solitude"],
+        related: "The quiet interior of sound: piano, space and atmosphere becoming a language for things that remain difficult to articulate."
+    },
+
+    "la-vie-en-rose": {
+        name: "La Vie en Rose",
+        field: "song · French popular music",
+        description: "A French song strongly associated with Edith Piaf and with the imagery of love, tenderness and seeing the world through an altered emotional lens.",
+        works: [
+            "La Vie en Rose"
+        ],
+        themes: ["love", "memory", "romance", "France", "nostalgia"],
+        related: "A song that turns perception itself into metaphor: the world changes when seen through emotion."
+    },
+
+    "radiohead": {
+        name: "Radiohead",
+        field: "band · alternative rock · experimental",
+        description: "An English rock band known for combining alternative rock with electronic, experimental and atmospheric elements. Their music frequently explores alienation, technology, anxiety and modern existence.",
+        works: [
+            "OK Computer",
+            "Kid A",
+            "In Rainbows"
+        ],
+        themes: ["alienation", "technology", "anxiety", "modernity", "existence"],
+        related: "The psychological landscape of modern life: isolation, technological change and the search for meaning."
+    },
+
+    "florence": {
+        name: "Florence + the Machine",
+        field: "band · alternative · art pop",
+        description: "An English musical project known for dramatic arrangements, powerful vocals and recurring imagery drawn from mythology, religion, nature, love and transformation.",
+        works: [
+            "Ceremonials",
+            "How Big, How Blue, How Beautiful",
+            "Dance Fever"
+        ],
+        themes: ["mythology", "ritual", "love", "transformation", "spirituality"],
+        related: "Music as ritual: mythology, symbolism and emotion transformed into theatrical sound."
+    },
+
+    "mitski": {
+        name: "Mitski",
+        field: "singer · songwriter · alternative",
+        description: "A Japanese-American singer and songwriter whose work often examines identity, loneliness, desire, belonging and the contradictions of emotional life.",
+        works: [
+            "Bury Me at Makeout Creek",
+            "Puberty 2",
+            "Be the Cowboy"
+        ],
+        themes: ["loneliness", "identity", "desire", "belonging", "vulnerability"],
+        related: "The private interior made audible: contradictions of identity, intimacy and loneliness transformed into song."
+    },
+
+    "smiths": {
+        name: "The Smiths",
+        field: "band · alternative rock · indie",
+        description: "An English rock band whose music became known for combining melancholic guitar work with literary imagery, irony and themes of alienation, longing and emotional isolation.",
+        works: [
+            "The Queen Is Dead",
+            "Strangeways, Here We Come",
+            "Meat Is Murder"
+        ],
+        themes: ["melancholy", "alienation", "literature", "irony", "longing"],
+        related: "The meeting of literary language and melancholy, turning alienation and longing into something almost theatrical."
+    }
+
+};
+
+
+function showMusic(musicId) {
+
+    const item = music[musicId];
+
+    document.getElementById("catalog").style.display = "none";
+    document.querySelector("header").style.display = "none";
+    document.querySelector(".archive-return").style.display = "none";
+
+    document.getElementById("details").style.display = "block";
+
+    setTimeout(function() {
+        document.getElementById("details").classList.add("visible");
+    }, 20);
+
+    document.getElementById("name").textContent = item.name;
+    document.getElementById("field").textContent = item.field;
+    document.getElementById("description").textContent = item.description;
+    document.getElementById("related").textContent = item.related;
+
+
+    const works = document.getElementById("works");
+
+    works.innerHTML = "";
+
+    item.works.forEach(function(work) {
+
+        const element = document.createElement("div");
+
+        element.className = "work";
+        element.textContent = work;
+
+        works.appendChild(element);
+
+    });
+
+
+    const themes = document.getElementById("themes");
+
+    themes.innerHTML = "";
+
+    item.themes.forEach(function(theme) {
+
+        const element = document.createElement("div");
+
+        element.className = "theme";
+        element.textContent = theme;
+
+        themes.appendChild(element);
+
+    });
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function returnToMusic() {
+
+    document.getElementById("details").classList.remove("visible");
+
+    setTimeout(function() {
+
+        document.getElementById("details").style.display = "none";
+        document.getElementById("catalog").style.display = "block";
+        document.querySelector("header").style.display = "block";
+        document.querySelector(".archive-return").style.display = "block";
+
+    }, 300);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
