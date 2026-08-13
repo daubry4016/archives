@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Søren Kierkegaard — Asteren D'Aubray</title>
+
+<style>
+    body {
+        background: #0b0b0b;
+        color: #d6d1c8;
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 80px 20px;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 38px;
+        font-weight: normal;
+        letter-spacing: 5px;
+        margin-bottom: 15px;
+    }
+
+    .period {
+        font-style: italic;
+        opacity: 0.5;
+        margin-bottom: 8px;
+    }
+
+    .roles {
+        font-size: 13px;
+        letter-spacing: 2px;
+        text-transform: lowercase;
+        opacity: 0.4;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #292929;
+        margin: 60px auto;
+    }
+
+    h2 {
+        font-size: 13px;
+        font-weight: normal;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.45;
+        margin-bottom: 25px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #bdb8af;
+    }
+
+    .item {
+        padding: 15px 0;
+        border-bottom: 1px solid #242424;
+    }
+
+    .item-name {
+        font-size: 18px;
+    }
+
+    .item-description {
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.5;
+        margin-top: 6px;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .tag {
+        border: 1px solid #292929;
+        padding: 8px 12px;
+        font-size: 13px;
+        opacity: 0.6;
+    }
+
+    .return {
+        display: block;
+        text-align: center;
+        margin-top: 80px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.4;
+        transition: 0.3s;
+    }
+
+    .return:hover {
+        opacity: 1;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<header>
+    <h1>SØREN KIERKEGAARD</h1>
+
+    <div class="period">
+        1813 — 1855
+    </div>
+
+    <div class="roles">
+        philosopher · writer · theologian
+    </div>
+</header>
+
+
+<hr>
+
+
+<section>
+
+    <h2>biography</h2>
+
+    <p>
+        Søren Kierkegaard was a Danish philosopher and writer whose
+        work focused intensely on the individual, subjective
+        experience, choice, faith and the difficulties of becoming
+        oneself.
+    </p>
+
+    <p>
+        His writings frequently examine anxiety, despair and the
+        uncertainty that accompanies genuine choice. Rather than
+        constructing philosophy as a detached system, Kierkegaard
+        emphasized the lived experience of the individual and the
+        responsibility of existing as a self.
+    </p>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+    <h2>works</h2>
+
+    <div class="item">
+        <div class="item-name">
+            Either/Or
+        </div>
+
+        <div class="item-description">
+            An exploration of contrasting ways of living, including
+            aesthetic pleasure, ethical commitment and the problem
+            of choosing between them.
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-name">
+            Fear and Trembling
+        </div>
+
+        <div class="item-description">
+            A philosophical examination of faith, sacrifice and
+            the difficult relationship between individual belief
+            and universal ethical principles.
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-name">
+            The Concept of Anxiety
+        </div>
+
+        <div class="item-description">
+            An investigation into anxiety, freedom and the possibility
+            that emerges when an individual becomes aware of choice.
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-name">
+            The Sickness Unto Death
+        </div>
+
+        <div class="item-description">
+            A philosophical and theological exploration of despair,
+            selfhood and the individual's relationship with existence.
+        </div>
+    </div>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+    <h2>philosophical threads</h2>
+
+    <div class="tags">
+        <div class="tag">existence</div>
+        <div class="tag">anxiety</div>
+        <div class="tag">despair</div>
+        <div class="tag">faith</div>
+        <div class="tag">choice</div>
+        <div class="tag">freedom</div>
+        <div class="tag">subjectivity</div>
+        <div class="tag">the individual</div>
+    </div>
+
+</section>
+
+
+<hr>
+
+
+<section>
+
+    <h2>related</h2>
+
+    <div class="item">
+        <div class="item-name">
+            Existentialism
+        </div>
+
+        <div class="item-description">
+            Kierkegaard is often regarded as an important precursor
+            to existentialism because of his focus on individual
+            existence, freedom, choice and responsibility.
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-name">
+            Friedrich Nietzsche
+        </div>
+
+        <div class="item-description">
+            Both thinkers challenged inherited systems of thought
+            and placed unusual emphasis on the individual and the
+            problem of becoming oneself.
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-name">
+            Søren Kierkegaard & Fyodor Dostoevsky
+        </div>
+
+        <div class="item-description">
+            Two writers deeply concerned with faith, doubt, freedom,
+            guilt and the difficult choices faced by the individual.
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-name">
+            The Individual
+        </div>
+
+        <div class="item-description">
+            For Kierkegaard, existence cannot be reduced entirely to
+            abstract systems; the individual must ultimately confront
+            life personally.
+        </div>
+    </div>
+
+</section>
+
+
+<hr>
+
+
+<a class="return" href="authors.html">
+    ← return to authors
+</a>
+```
+
+</div>
+
+</body>
+</html>
