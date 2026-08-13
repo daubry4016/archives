@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Mythology — Asteren D'Aubray</title>
+
+<style>
+    body {
+        background: #0b0b0b;
+        color: #d6d1c8;
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 80px 20px;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 38px;
+        font-weight: normal;
+        letter-spacing: 6px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-style: italic;
+        opacity: 0.5;
+    }
+
+    .category {
+        margin-bottom: 50px;
+    }
+
+    .category-name {
+        font-size: 13px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.4;
+        margin-bottom: 18px;
+    }
+
+    .myth {
+        display: block;
+        width: 100%;
+        background: transparent;
+        color: #d6d1c8;
+        border: 0;
+        border-bottom: 1px solid #242424;
+        padding: 16px 0;
+        font-family: Georgia, serif;
+        font-size: 18px;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .myth:hover {
+        color: white;
+        padding-left: 8px;
+    }
+
+    .motifs {
+        margin-top: 70px;
+    }
+
+    .motif {
+        padding: 13px 0;
+        border-bottom: 1px solid #242424;
+        color: #aaa59d;
+        font-style: italic;
+    }
+
+    #details {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    #details.visible {
+        display: block;
+        opacity: 1;
+    }
+
+    .back {
+        display: inline-block;
+        margin-bottom: 45px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.45;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .back:hover {
+        opacity: 1;
+    }
+
+    .myth-name {
+        font-size: 34px;
+        font-weight: normal;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+    }
+
+    .origin {
+        font-style: italic;
+        opacity: 0.5;
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 12px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.4;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        color: #bdb8af;
+        font-size: 16px;
+        line-height: 1.9;
+        margin-bottom: 45px;
+    }
+
+    .info {
+        padding: 15px 0;
+        border-bottom: 1px solid #242424;
+        color: #aaa59d;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .themes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .theme {
+        border: 1px solid #292929;
+        padding: 8px 12px;
+        font-size: 13px;
+        opacity: 0.6;
+    }
+
+    .related {
+        color: #aaa59d;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 45px;
+    }
+
+    .archive-return {
+        display: block;
+        text-align: center;
+        margin-top: 80px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.4;
+        transition: 0.3s;
+    }
+
+    .archive-return:hover {
+        opacity: 1;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<header>
+    <h1>MYTHOLOGY</h1>
+
+    <div class="subtitle">
+        stories older than memory.
+    </div>
+</header>
+
+
+<!-- MYTHOLOGY CATALOG -->
+
+<div id="catalog">
+
+    <div class="category">
+        <div class="category-name">Greek Mythology</div>
+
+        <button class="myth" onclick="showMyth('hades')">
+            Hades
+        </button>
+
+        <button class="myth" onclick="showMyth('persephone')">
+            Persephone
+        </button>
+
+        <button class="myth" onclick="showMyth('orpheus')">
+            Orpheus and Eurydice
+        </button>
+
+        <button class="myth" onclick="showMyth('prometheus')">
+            Prometheus
+        </button>
+
+        <button class="myth" onclick="showMyth('icarus')">
+            Icarus
+        </button>
+
+        <button class="myth" onclick="showMyth('athena')">
+            Athena
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Roman Mythology</div>
+
+        <button class="myth" onclick="showMyth('venus')">
+            Venus
+        </button>
+
+        <button class="myth" onclick="showMyth('pluto')">
+            Pluto
+        </button>
+
+        <button class="myth" onclick="showMyth('proserpina')">
+            Proserpina
+        </button>
+
+        <button class="myth" onclick="showMyth('janus')">
+            Janus
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Norse Mythology</div>
+
+        <button class="myth" onclick="showMyth('odin')">
+            Odin
+        </button>
+
+        <button class="myth" onclick="showMyth('loki')">
+            Loki
+        </button>
+
+        <button class="myth" onclick="showMyth('freyja')">
+            Freyja
+        </button>
+
+        <button class="myth" onclick="showMyth('hel')">
+            Hel
+        </button>
+
+        <button class="myth" onclick="showMyth('yggdrasil')">
+            Yggdrasil
+        </button>
+
+        <button class="myth" onclick="showMyth('ragnarok')">
+            Ragnarök
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Egyptian Mythology</div>
+
+        <button class="myth" onclick="showMyth('anubis')">
+            Anubis
+        </button>
+
+        <button class="myth" onclick="showMyth('osiris')">
+            Osiris
+        </button>
+
+        <button class="myth" onclick="showMyth('isis')">
+            Isis
+        </button>
+
+        <button class="myth" onclick="showMyth('thoth')">
+            Thoth
+        </button>
+
+        <button class="myth" onclick="showMyth('maat')">
+            Ma’at
+        </button>
+    </div>
+
+
+    <div class="motifs">
+
+        <div class="category-name">Motifs</div>
+
+        <div class="motif">the underworld</div>
+        <div class="motif">forbidden knowledge</div>
+        <div class="motif">fate and free will</div>
+        <div class="motif">death and rebirth</div>
+        <div class="motif">transformation</div>
+        <div class="motif">the fall from grace</div>
+        <div class="motif">the search for immortality</div>
+
+    </div>
+
+</div>
+
+
+<!-- MYTH DETAILS -->
+
+<div id="details">
+
+    <a class="back" onclick="returnToMythology()">
+        ← return to mythology
+    </a>
+
+    <div class="myth-name" id="name"></div>
+
+    <div class="origin" id="origin"></div>
+
+    <div class="section-title">about</div>
+
+    <div class="description" id="description"></div>
+
+    <div class="section-title">role / story</div>
+
+    <div class="info" id="role"></div>
+
+    <div class="section-title">themes</div>
+
+    <div class="themes" id="themes"></div>
+
+    <div class="section-title">related threads</div>
+
+    <div class="related" id="related"></div>
+
+</div>
+
+
+<a class="archive-return" href="index.html">
+    ← return to the archive
+</a>
+```
+
+</div>
+
+<script>
+
+const mythology = {
+
+    "hades": {
+        name: "Hades",
+        origin: "Greek mythology · underworld · god of the dead",
+        description: "God and ruler of the Greek underworld. Hades presides over the realm of the dead and is associated with wealth beneath the earth, permanence and the boundaries between life and death.",
+        role: "Ruler of the underworld and keeper of the realm of the dead.",
+        themes: ["underworld", "death", "boundaries", "wealth", "inevitability"],
+        related: "Hades connects directly to the archive's recurring fascination with the underworld, mortality and the spaces between what is lost and what remains."
+    },
+
+    "persephone": {
+        name: "Persephone",
+        origin: "Greek mythology · underworld · goddess of spring",
+        description: "A figure whose myth connects the worlds of life and death. Her seasonal descent into the underworld and return to the surface became associated with cycles of loss, renewal and transformation.",
+        role: "Queen of the underworld and goddess associated with spring and renewal.",
+        themes: ["death and rebirth", "seasons", "transformation", "underworld", "duality"],
+        related: "Persephone embodies one of mythology's oldest patterns: descent, disappearance, transformation and return."
+    },
+
+    "orpheus": {
+        name: "Orpheus and Eurydice",
+        origin: "Greek mythology · love · descent into the underworld",
+        description: "The story of Orpheus, a musician who enters the underworld to recover Eurydice. His journey becomes a myth about love, loss, trust and the impossibility of reversing death.",
+        role: "Orpheus attempts to bring Eurydice back from the dead under a condition that he ultimately fails to fulfill.",
+        themes: ["love", "loss", "death", "music", "memory"],
+        related: "A myth in which music crosses the boundary between life and death, but cannot permanently undo mortality."
+    },
+
+    "prometheus": {
+        name: "Prometheus",
+        origin: "Greek mythology · forbidden knowledge · rebellion",
+        description: "A Titan associated with humanity, fire and the transgression of divine boundaries. His story has often been interpreted as a myth of knowledge, rebellion and the consequences of defying authority.",
+        role: "A figure who gives fire to humanity and suffers punishment for crossing the limits imposed by the gods.",
+        themes: ["forbidden knowledge", "rebellion", "creation", "sacrifice", "freedom"],
+        related: "Prometheus represents the recurring question of whether knowledge is worth the price demanded for obtaining it."
+    },
+
+    "icarus": {
+        name: "Icarus",
+        origin: "Greek mythology · flight · hubris",
+        description: "The son of Daedalus who attempts to escape captivity using wings constructed by his father. His story became a lasting symbol of ambition, disobedience and the dangers of exceeding one's limits.",
+        role: "A young figure whose attempt at freedom becomes a story about boundaries and consequence.",
+        themes: ["ambition", "freedom", "hubris", "fall", "limits"],
+        related: "The fall of Icarus echoes the archive's recurring fascination with transformation, downfall and the fragile boundary between freedom and destruction."
+    },
+
+    "athena": {
+        name: "Athena",
+        origin: "Greek mythology · wisdom · strategy",
+        description: "A Greek goddess associated with wisdom, strategic warfare, crafts and reason. Athena represents a form of power grounded not simply in force but in intelligence and deliberate action.",
+        role: "Goddess of wisdom, strategic warfare and crafts.",
+        themes: ["wisdom", "reason", "strategy", "knowledge", "civilization"],
+        related: "Athena connects mythology with the archive's philosophical interest in knowledge, reason and the ways human beings attempt to understand the world."
+    },
+
+    "venus": {
+        name: "Venus",
+        origin: "Roman mythology · love · beauty",
+        description: "Roman goddess associated with love, beauty and desire. Her figure became deeply influential in later European art and literature.",
+        role: "Goddess of love, beauty and desire.",
+        themes: ["beauty", "love", "desire", "art", "transformation"],
+        related: "Venus links mythology to the archive's recurring questions about beauty, desire and the ways artists transform myth into image."
+    },
+
+    "pluto": {
+        name: "Pluto",
+        origin: "Roman mythology · underworld · wealth",
+        description: "Roman god of the underworld, corresponding broadly to the Greek Hades. His name is also connected with the wealth hidden beneath the earth.",
+        role: "Ruler of the Roman underworld and guardian of the dead.",
+        themes: ["underworld", "death", "wealth", "earth", "inevitability"],
+        related: "Pluto reinforces the recurring mythological image of the underworld as a place of both death and hidden value."
+    },
+
+    "proserpina": {
+        name: "Proserpina",
+        origin: "Roman mythology · underworld · renewal",
+        description: "Roman counterpart of Persephone. Her story connects the underworld with seasonal change and the cyclical movement between disappearance and return.",
+        role: "Queen of the underworld whose story became associated with the changing seasons.",
+        themes: ["rebirth", "seasons", "underworld", "transformation", "duality"],
+        related: "Proserpina represents the cyclical structure of loss and return, where disappearance is not necessarily the end."
+    },
+
+    "janus": {
+        name: "Janus",
+        origin: "Roman mythology · beginnings · transitions",
+        description: "Roman god of beginnings, transitions, doorways and passages. Janus is traditionally represented with two faces looking in opposite directions.",
+        role: "God associated with doors, transitions, beginnings and endings.",
+        themes: ["transformation", "thresholds", "time", "beginnings", "duality"],
+        related: "Janus is almost an embodiment of the archive itself: one face looking toward what has been, another toward what has yet to come."
+    },
+
+    "odin": {
+        name: "Odin",
+        origin: "Norse mythology · wisdom · knowledge · war",
+        description: "A major Norse god associated with wisdom, knowledge, poetry, magic and war. Odin repeatedly sacrifices comfort and certainty in pursuit of knowledge.",
+        role: "God associated with wisdom, knowledge, poetry, magic and war.",
+        themes: ["knowledge", "sacrifice", "wisdom", "fate", "war"],
+        related: "Odin connects strongly to the motif of forbidden knowledge and the idea that understanding may require sacrifice."
+    },
+
+    "loki": {
+        name: "Loki",
+        origin: "Norse mythology · trickster · transformation",
+        description: "A complex Norse figure associated with deception, transformation and disruption. Loki occupies an unstable position between the gods and their enemies.",
+        role: "A trickster figure whose actions repeatedly disrupt the established order.",
+        themes: ["transformation", "chaos", "deception", "identity", "fate"],
+        related: "Loki represents instability itself: the figure who crosses boundaries and transforms the world through disruption."
+    },
+
+    "freyja": {
+        name: "Freyja",
+        origin: "Norse mythology · love · beauty · magic",
+        description: "A Norse goddess associated with love, beauty, fertility, magic and war. Her character combines tenderness with power and spiritual knowledge.",
+        role: "Goddess associated with love, beauty, fertility, magic and battle.",
+        themes: ["love", "beauty", "magic", "war", "desire"],
+        related: "Freyja brings together seemingly opposing qualities: beauty and violence, desire and power, tenderness and independence."
+    },
+
+    "hel": {
+        name: "Hel",
+        origin: "Norse mythology · underworld · dead",
+        description: "Ruler of a realm of the dead in Norse mythology. Hel is a figure associated with the boundary between life and death and with the inevitability of mortality.",
+        role: "Ruler of the realm inhabited by many of the dead.",
+        themes: ["underworld", "death", "duality", "mortality", "fate"],
+        related: "Hel continues the archive's recurring exploration of the underworld as a place of separation, memory and inevitable endings."
+    },
+
+    "yggdrasil": {
+        name: "Yggdrasil",
+        origin: "Norse mythology · cosmic tree · worlds",
+        description: "The immense cosmic tree that connects different realms of Norse cosmology. Its roots and branches form an image of a universe held together through interconnected worlds.",
+        role: "Cosmic structure connecting the various realms of Norse mythology.",
+        themes: ["cosmos", "connection", "life", "fate", "worlds"],
+        related: "Yggdrasil mirrors the idea of an archive itself: separate fragments connected through a larger structure."
+    },
+
+    "ragnarok": {
+        name: "Ragnarök",
+        origin: "Norse mythology · apocalypse · renewal",
+        description: "A sequence of catastrophic events culminating in the destruction of the established cosmic order. Yet Ragnarök is also followed by renewal and the emergence of a new world.",
+        role: "The great destruction and transformation of the Norse cosmos.",
+        themes: ["fate", "destruction", "rebirth", "cycles", "transformation"],
+        related: "Ragnarök embodies destruction as transformation rather than simple disappearance: the end of one world becomes the beginning of another."
+    },
+
+    "anubis": {
+        name: "Anubis",
+        origin: "Egyptian mythology · death · burial",
+        description: "An Egyptian deity associated with funerary rites, protection of the dead and the passage into the afterlife. He is traditionally depicted with the head of a jackal.",
+        role: "Guardian and guide of the dead and associated with funerary rituals.",
+        themes: ["death", "afterlife", "judgment", "protection", "passage"],
+        related: "Anubis connects death with ritual and transition, treating the passage between worlds as something that can be guided and witnessed."
+    },
+
+    "osiris": {
+        name: "Osiris",
+        origin: "Egyptian mythology · death · resurrection",
+        description: "An Egyptian god associated with the afterlife, resurrection and fertility. His myth centers on death, restoration and the continuation of existence beyond destruction.",
+        role: "God and ruler associated with the afterlife and resurrection.",
+        themes: ["death and rebirth", "resurrection", "fertility", "afterlife", "renewal"],
+        related: "Osiris is one of the clearest expressions of the archive's motif of death followed by transformation and renewal."
+    },
+
+    "isis": {
+        name: "Isis",
+        origin: "Egyptian mythology · magic · motherhood",
+        description: "A major Egyptian goddess associated with magic, healing, motherhood and protection. Her mythology includes the restoration of Osiris and the protection of Horus.",
+        role: "Goddess associated with magic, motherhood, healing and protection.",
+        themes: ["magic", "motherhood", "healing", "protection", "rebirth"],
+        related: "Isis represents restoration through knowledge, devotion and magical power."
+    },
+
+    "thoth": {
+        name: "Thoth",
+        origin: "Egyptian mythology · writing · knowledge",
+        description: "An Egyptian deity associated with writing, wisdom, language, knowledge and measurement. Thoth embodies the preservation and ordering of information.",
+        role: "God associated with writing, knowledge, wisdom and language.",
+        themes: ["knowledge", "writing", "language", "wisdom", "memory"],
+        related: "Thoth may be the closest mythological figure to the archive itself: the keeper of language, knowledge and recorded memory."
+    },
+
+    "maat": {
+        name: "Ma’at",
+        origin: "Egyptian mythology · truth · cosmic order",
+        description: "The Egyptian concept and divine personification associated with truth, justice, balance and cosmic order. Ma’at represents the principle through which the universe and society remain in harmony.",
+        role: "Personification and principle of truth, justice, balance and cosmic order.",
+        themes: ["truth", "justice", "balance", "order", "ethics"],
+        related: "Ma’at connects mythology directly with philosophy and ethics: the question of what keeps a world in balance."
+    }
+
+};
+
+
+function showMyth(mythId) {
+
+    const myth = mythology[mythId];
+
+    document.getElementById("catalog").style.display = "none";
+    document.querySelector("header").style.display = "none";
+    document.querySelector(".archive-return").style.display = "none";
+
+    document.getElementById("details").style.display = "block";
+
+    setTimeout(function() {
+        document.getElementById("details").classList.add("visible");
+    }, 20);
+
+    document.getElementById("name").textContent = myth.name;
+    document.getElementById("origin").textContent = myth.origin;
+    document.getElementById("description").textContent = myth.description;
+    document.getElementById("role").textContent = myth.role;
+    document.getElementById("related").textContent = myth.related;
+
+
+    const themes = document.getElementById("themes");
+
+    themes.innerHTML = "";
+
+    myth.themes.forEach(function(theme) {
+
+        const tag = document.createElement("div");
+
+        tag.className = "theme";
+        tag.textContent = theme;
+
+        themes.appendChild(tag);
+
+    });
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function returnToMythology() {
+
+    document.getElementById("details").classList.remove("visible");
+
+    setTimeout(function() {
+
+        document.getElementById("details").style.display = "none";
+        document.getElementById("catalog").style.display = "block";
+        document.querySelector("header").style.display = "block";
+        document.querySelector(".archive-return").style.display = "block";
+
+    }, 300);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
