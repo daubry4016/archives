@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Books — Asteren D'Aubray</title>
+
+<style>
+    body {
+        background: #0b0b0b;
+        color: #d6d1c8;
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 80px 20px;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 38px;
+        font-weight: normal;
+        letter-spacing: 6px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-style: italic;
+        opacity: 0.5;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #292929;
+        margin: 55px auto;
+    }
+
+    .author {
+        margin-bottom: 45px;
+    }
+
+    .author-name {
+        font-size: 14px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.45;
+        margin-bottom: 18px;
+    }
+
+    .book {
+        display: block;
+        width: 100%;
+        background: transparent;
+        color: #d6d1c8;
+        border: 0;
+        border-bottom: 1px solid #242424;
+        padding: 15px 0;
+        font-family: Georgia, serif;
+        font-size: 18px;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .book:hover {
+        color: white;
+        padding-left: 8px;
+    }
+
+    #details {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    #details.visible {
+        display: block;
+        opacity: 1;
+    }
+
+    .back {
+        display: inline-block;
+        margin-bottom: 45px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.45;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .back:hover {
+        opacity: 1;
+    }
+
+    .book-title {
+        font-size: 34px;
+        font-weight: normal;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+    }
+
+    .book-author {
+        font-style: italic;
+        opacity: 0.5;
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 12px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.4;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        color: #bdb8af;
+        font-size: 16px;
+        line-height: 1.9;
+        margin-bottom: 45px;
+    }
+
+    .themes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .theme {
+        border: 1px solid #292929;
+        padding: 8px 12px;
+        font-size: 13px;
+        opacity: 0.6;
+    }
+
+    .philosophy {
+        color: #aaa59d;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 45px;
+    }
+
+    .archive-return {
+        display: block;
+        text-align: center;
+        margin-top: 80px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.4;
+        transition: 0.3s;
+    }
+
+    .archive-return:hover {
+        opacity: 1;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<header>
+    <h1>BOOKS</h1>
+
+    <div class="subtitle">
+        books that left something behind.
+    </div>
+</header>
+
+
+<!-- BOOK CATALOG -->
+
+<div id="catalog">
+
+    <div class="author">
+        <div class="author-name">Dante Alighieri</div>
+
+        <button class="book" onclick="showBook('divine-comedy')">
+            La Divina Commedia
+        </button>
+
+        <button class="book" onclick="showBook('vita-nuova')">
+            Vita Nuova
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Friedrich Nietzsche</div>
+
+        <button class="book" onclick="showBook('zarathustra')">
+            Thus Spoke Zarathustra
+        </button>
+
+        <button class="book" onclick="showBook('beyond-good-and-evil')">
+            Beyond Good and Evil
+        </button>
+
+        <button class="book" onclick="showBook('genealogy-of-morality')">
+            On the Genealogy of Morality
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Franz Kafka</div>
+
+        <button class="book" onclick="showBook('metamorphosis')">
+            The Metamorphosis
+        </button>
+
+        <button class="book" onclick="showBook('trial')">
+            The Trial
+        </button>
+
+        <button class="book" onclick="showBook('castle')">
+            The Castle
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Fyodor Dostoevsky</div>
+
+        <button class="book" onclick="showBook('crime-and-punishment')">
+            Crime and Punishment
+        </button>
+
+        <button class="book" onclick="showBook('brothers-karamazov')">
+            The Brothers Karamazov
+        </button>
+
+        <button class="book" onclick="showBook('notes-underground')">
+            Notes from Underground
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Edgar Allan Poe</div>
+
+        <button class="book" onclick="showBook('raven')">
+            The Raven and Other Poems
+        </button>
+
+        <button class="book" onclick="showBook('tales-mystery')">
+            Tales of Mystery and Imagination
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Virginia Woolf</div>
+
+        <button class="book" onclick="showBook('mrs-dalloway')">
+            Mrs Dalloway
+        </button>
+
+        <button class="book" onclick="showBook('to-the-lighthouse')">
+            To the Lighthouse
+        </button>
+
+        <button class="book" onclick="showBook('room-of-ones-own')">
+            A Room of One's Own
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Albert Camus</div>
+
+        <button class="book" onclick="showBook('the-stranger')">
+            The Stranger
+        </button>
+
+        <button class="book" onclick="showBook('myth-of-sisyphus')">
+            The Myth of Sisyphus
+        </button>
+
+        <button class="book" onclick="showBook('the-plague')">
+            The Plague
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Arthur Schopenhauer</div>
+
+        <button class="book" onclick="showBook('world-as-will')">
+            The World as Will and Representation
+        </button>
+
+        <button class="book" onclick="showBook('essays-aphorisms')">
+            Essays and Aphorisms
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Charles Baudelaire</div>
+
+        <button class="book" onclick="showBook('fleurs-du-mal')">
+            Les Fleurs du mal
+        </button>
+
+        <button class="book" onclick="showBook('spleen-paris')">
+            The Spleen of Paris
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Søren Kierkegaard</div>
+
+        <button class="book" onclick="showBook('either-or')">
+            Either/Or
+        </button>
+
+        <button class="book" onclick="showBook('fear-and-trembling')">
+            Fear and Trembling
+        </button>
+
+        <button class="book" onclick="showBook('concept-of-anxiety')">
+            The Concept of Anxiety
+        </button>
+    </div>
+
+
+    <div class="author">
+        <div class="author-name">Fernando Pessoa</div>
+
+        <button class="book" onclick="showBook('book-of-disquiet')">
+            The Book of Disquiet
+        </button>
+
+        <button class="book" onclick="showBook('mensagem')">
+            Mensagem
+        </button>
+    </div>
+
+</div>
+
+
+<!-- BOOK DETAILS -->
+
+<div id="details">
+
+    <a class="back" onclick="returnToBooks()">
+        ← return to books
+    </a>
+
+    <div class="book-title" id="title"></div>
+
+    <div class="book-author" id="author"></div>
+
+    <div class="section-title">about</div>
+
+    <div class="description" id="description"></div>
+
+    <div class="section-title">themes</div>
+
+    <div class="themes" id="themes"></div>
+
+    <div class="section-title">philosophical threads</div>
+
+    <div class="philosophy" id="philosophy"></div>
+
+</div>
+
+
+<a class="archive-return" href="index.html">
+    ← return to the archive
+</a>
+```
+
+</div>
+
+<script>
+
+const books = {
+
+    "divine-comedy": {
+        title: "La Divina Commedia",
+        author: "Dante Alighieri",
+        description: "An allegorical journey through Inferno, Purgatorio and Paradiso. A vast meditation on sin, redemption, love, justice and the structure of the afterlife.",
+        themes: ["afterlife", "sin", "redemption", "justice", "love", "journey"],
+        philosophy: "Questions of morality, divine justice, human freedom and the possibility of transformation."
+    },
+
+    "vita-nuova": {
+        title: "Vita Nuova",
+        author: "Dante Alighieri",
+        description: "A collection of poetry and prose centered around love, memory and Beatrice, combining personal experience with a deeply symbolic vision of devotion.",
+        themes: ["love", "memory", "devotion", "poetry", "idealization"],
+        philosophy: "The transformation of personal love into something spiritual, symbolic and transcendent."
+    },
+
+    "zarathustra": {
+        title: "Thus Spoke Zarathustra",
+        author: "Friedrich Nietzsche",
+        description: "A philosophical and poetic work following Zarathustra as he reflects on humanity, transformation, morality and the possibility of creating new values.",
+        themes: ["transformation", "values", "self-overcoming", "freedom"],
+        philosophy: "Central ideas associated with Nietzsche's thought, including self-overcoming and the creation of values."
+    },
+
+    "beyond-good-and-evil": {
+        title: "Beyond Good and Evil",
+        author: "Friedrich Nietzsche",
+        description: "A critique of traditional moral assumptions and philosophical certainty, questioning the origins and authority of inherited values.",
+        themes: ["morality", "values", "truth", "power", "perspective"],
+        philosophy: "A challenge to absolute moral categories and the idea that philosophy can ever be completely separated from perspective."
+    },
+
+    "genealogy-of-morality": {
+        title: "On the Genealogy of Morality",
+        author: "Friedrich Nietzsche",
+        description: "An investigation into the historical and psychological origins of moral concepts such as guilt, punishment and good and evil.",
+        themes: ["morality", "guilt", "punishment", "history", "values"],
+        philosophy: "An attempt to understand morality by examining how values developed rather than accepting them as eternal truths."
+    },
+
+    "metamorphosis": {
+        title: "The Metamorphosis",
+        author: "Franz Kafka",
+        description: "A surreal story of transformation, alienation and family relationships, centered on an individual suddenly separated from ordinary human life.",
+        themes: ["alienation", "identity", "family", "absurdity", "transformation"],
+        philosophy: "The difficulty of maintaining identity and meaning when social roles and relationships collapse."
+    },
+
+    "trial": {
+        title: "The Trial",
+        author: "Franz Kafka",
+        description: "A mysterious legal system surrounds Josef K., who is accused without being given a clear explanation of his supposed crime.",
+        themes: ["bureaucracy", "alienation", "guilt", "absurdity", "power"],
+        philosophy: "The individual's confrontation with incomprehensible systems, authority and an uncertain sense of guilt."
+    },
+
+    "castle": {
+        title: "The Castle",
+        author: "Franz Kafka",
+        description: "A man attempts to gain access to an elusive authority known simply as the Castle, encountering endless obstacles and uncertainty.",
+        themes: ["bureaucracy", "alienation", "authority", "uncertainty", "absurdity"],
+        philosophy: "The struggle to reach meaning, recognition or belonging within systems that remain fundamentally inaccessible."
+    },
+
+    "crime-and-punishment": {
+        title: "Crime and Punishment",
+        author: "Fyodor Dostoevsky",
+        description: "A psychological novel examining guilt, morality and the consequences of an individual's attempt to place himself beyond ordinary moral rules.",
+        themes: ["guilt", "morality", "crime", "redemption", "isolation"],
+        philosophy: "Questions of moral responsibility, conscience, freedom and whether suffering can lead toward transformation."
+    },
+
+    "brothers-karamazov": {
+        title: "The Brothers Karamazov",
+        author: "Fyodor Dostoevsky",
+        description: "A complex novel exploring family, faith, doubt, morality, freedom and the problem of suffering.",
+        themes: ["faith", "doubt", "family", "freedom", "suffering"],
+        philosophy: "The conflict between belief and doubt and the difficult relationship between freedom, responsibility and morality."
+    },
+
+    "notes-underground": {
+        title: "Notes from Underground",
+        author: "Fyodor Dostoevsky",
+        description: "A fragmented monologue exploring consciousness, resentment, rationality, freedom and the contradictions of human behavior.",
+        themes: ["consciousness", "freedom", "isolation", "reason", "contradiction"],
+        philosophy: "A challenge to the idea that human beings can be completely explained by rational self-interest."
+    },
+
+    "raven": {
+        title: "The Raven and Other Poems",
+        author: "Edgar Allan Poe",
+        description: "A collection representing Poe's distinctive poetic atmosphere of grief, beauty, memory, death and obsession.",
+        themes: ["grief", "memory", "death", "beauty", "obsession"],
+        philosophy: "The relationship between beauty, mortality and the persistence of memory."
+    },
+
+    "tales-mystery": {
+        title: "Tales of Mystery and Imagination",
+        author: "Edgar Allan Poe",
+        description: "A collection of stories exploring mystery, psychological instability, fear, guilt and the darker possibilities of perception.",
+        themes: ["mystery", "fear", "guilt", "perception", "obsession"],
+        philosophy: "Questions concerning the reliability of perception and the boundaries between reason and irrationality."
+    },
+
+    "mrs-dalloway": {
+        title: "Mrs Dalloway",
+        author: "Virginia Woolf",
+        description: "A novel unfolding across a single day while moving through the memories, perceptions and inner lives of its characters.",
+        themes: ["memory", "time", "consciousness", "identity", "society"],
+        philosophy: "The relationship between inner experience, memory and the passage of time."
+    },
+
+    "to-the-lighthouse": {
+        title: "To the Lighthouse",
+        author: "Virginia Woolf",
+        description: "A meditation on family, perception, absence and time, exploring how people and relationships change across years.",
+        themes: ["time", "memory", "family", "absence", "perception"],
+        philosophy: "The instability of human experience and the ways memory reshapes our understanding of the past."
+    },
+
+    "room-of-ones-own": {
+        title: "A Room of One's Own",
+        author: "Virginia Woolf",
+        description: "An extended essay examining women, literature, education, independence and the material conditions necessary for creative work.",
+        themes: ["literature", "independence", "gender", "creativity", "education"],
+        philosophy: "The relationship between intellectual freedom, material independence and artistic creation."
+    },
+
+    "the-stranger": {
+        title: "The Stranger",
+        author: "Albert Camus",
+        description: "A novel centered on Meursault, whose detached relationship with social expectations brings questions of meaning, mortality and judgment into focus.",
+        themes: ["absurdity", "alienation", "mortality", "society", "meaning"],
+        philosophy: "The confrontation between individual existence and a world that does not provide an inherent explanation."
+    },
+
+    "myth-of-sisyphus": {
+        title: "The Myth of Sisyphus",
+        author: "Albert Camus",
+        description: "A philosophical essay examining the absurd and the tension between humanity's desire for meaning and the silence of the universe.",
+        themes: ["absurdity", "meaning", "freedom", "existence", "rebellion"],
+        philosophy: "Camus's central exploration of how to live in the face of an existence without guaranteed meaning."
+    },
+
+    "the-plague": {
+        title: "The Plague",
+        author: "Albert Camus",
+        description: "A novel about a city confronted by disease, examining suffering, solidarity, responsibility and resistance.",
+        themes: ["suffering", "solidarity", "responsibility", "resistance", "mortality"],
+        philosophy: "The possibility of meaningful action and solidarity even when circumstances offer no simple resolution."
+    },
+
+    "world-as-will": {
+        title: "The World as Will and Representation",
+        author: "Arthur Schopenhauer",
+        description: "Schopenhauer's principal philosophical work, presenting the world as representation while identifying an underlying, restless will as fundamental to existence.",
+        themes: ["will", "desire", "suffering", "representation", "existence"],
+        philosophy: "The relationship between perception, desire and the restless striving that Schopenhauer regarded as fundamental to life."
+    },
+
+    "essays-aphorisms": {
+        title: "Essays and Aphorisms",
+        author: "Arthur Schopenhauer",
+        description: "A collection of shorter reflections on human nature, happiness, knowledge, art, society and the difficulties of existence.",
+        themes: ["happiness", "human nature", "knowledge", "art", "life"],
+        philosophy: "Reflections on how human desires shape experience and how distance from those desires can provide relief."
+    },
+
+    "fleurs-du-mal": {
+        title: "Les Fleurs du mal",
+        author: "Charles Baudelaire",
+        description: "A collection of poetry exploring beauty, desire, mortality, decadence, boredom and the tension between the ideal and modern life.",
+        themes: ["beauty", "decadence", "desire", "mortality", "spleen"],
+        philosophy: "The transformation of suffering, boredom and decay into artistic beauty."
+    },
+
+    "spleen-paris": {
+        title: "The Spleen of Paris",
+        author: "Charles Baudelaire",
+        description: "A collection of prose poems inspired by modern urban life, fleeting encounters, loneliness and the contradictions of the city.",
+        themes: ["modernity", "city", "loneliness", "beauty", "spleen"],
+        philosophy: "The discovery of poetry and meaning within the fleeting experiences of modern life."
+    },
+
+    "either-or": {
+        title: "Either/Or",
+        author: "Søren Kierkegaard",
+        description: "A philosophical work presenting contrasting ways of living and examining the choices between aesthetic pleasure and ethical commitment.",
+        themes: ["choice", "ethics", "existence", "pleasure", "responsibility"],
+        philosophy: "The individual must confront the consequences of choosing how to live rather than remaining outside the decision."
+    },
+
+    "fear-and-trembling": {
+        title: "Fear and Trembling",
+        author: "Søren Kierkegaard",
+        description: "A meditation on faith and the story of Abraham, examining the tension between individual belief and universal ethical principles.",
+        themes: ["faith", "sacrifice", "ethics", "belief", "individuality"],
+        philosophy: "The paradoxes of faith and the difficult relationship between individual existence and universal morality."
+    },
+
+    "concept-of-anxiety": {
+        title: "The Concept of Anxiety",
+        author: "Søren Kierkegaard",
+        description: "An examination of anxiety, freedom and the possibility that emerges when an individual becomes aware of genuine choice.",
+        themes: ["anxiety", "freedom", "choice", "possibility", "existence"],
+        philosophy: "Anxiety is connected to freedom and the awareness of possibilities that accompany human choice."
+    },
+
+    "book-of-disquiet": {
+        title: "The Book of Disquiet",
+        author: "Fernando Pessoa",
+        description: "A fragmented collection of reflections and observations concerning solitude, identity, consciousness and ordinary existence.",
+        themes: ["solitude", "identity", "consciousness", "fragmentation", "existence"],
+        philosophy: "The instability of the self and the strange distance between inner life and the external world."
+    },
+
+    "mensagem": {
+        title: "Mensagem",
+        author: "Fernando Pessoa",
+        description: "A collection of poems drawing on Portuguese history, mythology and national symbolism.",
+        themes: ["mythology", "history", "identity", "symbolism", "memory"],
+        philosophy: "The relationship between collective memory, identity, myth and the construction of meaning."
+    }
+
+};
+
+
+function showBook(bookId) {
+
+    const book = books[bookId];
+
+    document.getElementById("catalog").style.display = "none";
+    document.querySelector("header").style.display = "none";
+    document.querySelector(".archive-return").style.display = "none";
+
+    document.getElementById("details").style.display = "block";
+
+    setTimeout(function() {
+        document.getElementById("details").classList.add("visible");
+    }, 20);
+
+    document.getElementById("title").textContent = book.title;
+    document.getElementById("author").textContent = book.author;
+    document.getElementById("description").textContent = book.description;
+    document.getElementById("philosophy").textContent = book.philosophy;
+
+    const themes = document.getElementById("themes");
+
+    themes.innerHTML = "";
+
+    book.themes.forEach(function(theme) {
+
+        const tag = document.createElement("div");
+
+        tag.className = "theme";
+        tag.textContent = theme;
+
+        themes.appendChild(tag);
+
+    });
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function returnToBooks() {
+
+    document.getElementById("details").classList.remove("visible");
+
+    setTimeout(function() {
+
+        document.getElementById("details").style.display = "none";
+        document.getElementById("catalog").style.display = "block";
+        document.querySelector("header").style.display = "block";
+        document.querySelector(".archive-return").style.display = "block";
+
+    }, 300);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
