@@ -6,7 +6,7 @@
 
 ### Dante Alighieri
 
-* *Divine Comedy*
+* *La Divina Commedia*
 * *Vita Nuova*
 
 ### Friedrich Nietzsche
@@ -37,6 +37,32 @@
 * *Mrs Dalloway*
 * *To the Lighthouse*
 * *A Room of One's Own*
+### Albert Camus
+
+- *The Stranger*
+- *The Myth of Sisyphus*
+- *The Plague*
+
+### Arthur Schopenhauer
+
+- *The World as Will and Representation*
+- *Essays and Aphorisms*
+
+### Charles Baudelaire
+
+- *Les Fleurs du mal*
+- *The Spleen of Paris*
+
+### Søren Kierkegaard
+
+- *Either/Or*
+- *Fear and Trembling*
+- *The Concept of Anxiety*
+
+### Fernando Pessoa
+
+- *The Book of Disquiet*
+- *Mensagem*
 
 ---
 
