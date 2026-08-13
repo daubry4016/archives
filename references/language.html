@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Language — Asteren D'Aubray</title>
+
+<style>
+    body {
+        background: #0b0b0b;
+        color: #d6d1c8;
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 80px 20px;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 38px;
+        font-weight: normal;
+        letter-spacing: 6px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-style: italic;
+        opacity: 0.5;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #292929;
+        margin: 55px auto;
+    }
+
+    .language {
+        display: block;
+        width: 100%;
+        background: transparent;
+        color: #d6d1c8;
+        border: 0;
+        border-bottom: 1px solid #242424;
+        padding: 18px 0;
+        font-family: Georgia, serif;
+        font-size: 19px;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .language:hover {
+        color: white;
+        padding-left: 8px;
+    }
+
+    #details {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    #details.visible {
+        display: block;
+        opacity: 1;
+    }
+
+    .back {
+        display: inline-block;
+        margin-bottom: 45px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.45;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .back:hover {
+        opacity: 1;
+    }
+
+    .language-name {
+        font-size: 34px;
+        font-weight: normal;
+        letter-spacing: 4px;
+        margin-bottom: 12px;
+    }
+
+    .origin {
+        font-style: italic;
+        opacity: 0.5;
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 12px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.4;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        color: #bdb8af;
+        font-size: 16px;
+        line-height: 1.9;
+        margin-bottom: 45px;
+    }
+
+    .phrase {
+        padding: 17px 0;
+        border-bottom: 1px solid #242424;
+        font-size: 18px;
+        font-style: italic;
+        color: #aaa59d;
+    }
+
+    .translation {
+        font-size: 13px;
+        font-style: normal;
+        opacity: 0.45;
+        margin-top: 6px;
+    }
+
+    .themes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .theme {
+        border: 1px solid #292929;
+        padding: 8px 12px;
+        font-size: 13px;
+        opacity: 0.6;
+    }
+
+    .related {
+        color: #aaa59d;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 45px;
+    }
+
+    .archive-return {
+        display: block;
+        text-align: center;
+        margin-top: 80px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.4;
+        transition: 0.3s;
+    }
+
+    .archive-return:hover {
+        opacity: 1;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<header>
+    <h1>LANGUAGE</h1>
+
+    <div class="subtitle">
+        words carry what silence cannot.
+    </div>
+</header>
+
+
+<!-- LANGUAGE CATALOG -->
+
+<div id="catalog">
+
+    <button class="language" onclick="showLanguage('latin')">
+        Latin
+    </button>
+
+    <button class="language" onclick="showLanguage('french')">
+        French
+    </button>
+
+    <button class="language" onclick="showLanguage('italian')">
+        Italian
+    </button>
+
+    <button class="language" onclick="showLanguage('greek')">
+        Ancient Greek
+    </button>
+
+</div>
+
+
+<!-- LANGUAGE DETAILS -->
+
+<div id="details">
+
+    <a class="back" onclick="returnToLanguages()">
+        ← return to languages
+    </a>
+
+    <div class="language-name" id="name"></div>
+
+    <div class="origin" id="origin"></div>
+
+    <div class="section-title">about</div>
+
+    <div class="description" id="description"></div>
+
+    <div class="section-title">phrases</div>
+
+    <div id="phrases"></div>
+
+    <div class="section-title">threads</div>
+
+    <div class="themes" id="themes"></div>
+
+    <div class="section-title">related</div>
+
+    <div class="related" id="related"></div>
+
+</div>
+
+
+<a class="archive-return" href="index.html">
+    ← return to the archive
+</a>
+```
+
+</div>
+
+<script>
+
+const languages = {
+
+    "latin": {
+        name: "LATIN",
+        origin: "ancient language · Rome · philosophy · theology",
+        description: "A classical language preserved through literature, philosophy, theology, law and inscriptions. Latin remained influential long after the Roman world and became deeply connected with European intellectual traditions.",
+        phrases: [
+            ["carpe diem", "seize the day"],
+            ["memento mori", "remember that you must die"],
+            ["amor fati", "love of fate"]
+        ],
+        themes: ["philosophy", "theology", "classical literature", "inscriptions", "history"],
+        related: "Latin connects the archive to Roman thought, medieval theology and later philosophical traditions. Its continued presence also gives old ideas a language that survives across centuries."
+    },
+
+    "french": {
+        name: "FRENCH",
+        origin: "language of poetry · literature · philosophy",
+        description: "A language deeply associated with European literature, poetry and philosophical writing. French has carried traditions of symbolism, existential thought, aesthetics and literary experimentation.",
+        phrases: [
+            ["c'est la vie", "that's life"],
+            ["à jamais", "forever"],
+            ["l'esprit", "the spirit · the mind"]
+        ],
+        themes: ["poetry", "literature", "philosophy", "elegance", "symbolism"],
+        related: "French connects naturally to Baudelaire, Camus and traditions of poetry and philosophy concerned with beauty, modernity, existence and the inner life."
+    },
+
+    "italian": {
+        name: "ITALIAN",
+        origin: "Dante · Renaissance · poetry · literary tradition",
+        description: "A language strongly associated with Dante and the development of Italian literary culture. Its presence in the archive evokes medieval poetry, the Renaissance and the long relationship between language and artistic expression.",
+        phrases: [
+            ["nel mezzo del cammin", "in the middle of the journey"],
+            ["dolce stil novo", "sweet new style"]
+        ],
+        themes: ["Dante", "poetry", "Renaissance", "literature", "love"],
+        related: "Italian is closely connected to Dante Alighieri and the literary tradition surrounding the Dolce Stil Novo, where language, love and philosophical reflection become intertwined."
+    },
+
+    "greek": {
+        name: "ANCIENT GREEK",
+        origin: "classical language · philosophy · mythology",
+        description: "A classical language central to ancient Greek philosophy, mythology, drama and literature. Many concepts that shaped later philosophical traditions were first expressed through Greek words and texts.",
+        phrases: [
+            ["γνῶθι σεαυτόν", "know thyself"],
+            ["πάντα ῥεῖ", "everything flows"]
+        ],
+        themes: ["philosophy", "mythology", "wisdom", "classical literature", "knowledge"],
+        related: "Ancient Greek connects the archive to Plato, Aristotle, Greek mythology and the philosophical tradition of questioning knowledge, reality and the nature of existence."
+    }
+
+};
+
+
+function showLanguage(languageId) {
+
+    const language = languages[languageId];
+
+    document.getElementById("catalog").style.display = "none";
+    document.querySelector("header").style.display = "none";
+    document.querySelector(".archive-return").style.display = "none";
+
+    document.getElementById("details").style.display = "block";
+
+    setTimeout(function() {
+        document.getElementById("details").classList.add("visible");
+    }, 20);
+
+    document.getElementById("name").textContent = language.name;
+    document.getElementById("origin").textContent = language.origin;
+    document.getElementById("description").textContent = language.description;
+    document.getElementById("related").textContent = language.related;
+
+
+    const phrases = document.getElementById("phrases");
+
+    phrases.innerHTML = "";
+
+    language.phrases.forEach(function(item) {
+
+        const phrase = document.createElement("div");
+
+        phrase.className = "phrase";
+        phrase.textContent = item[0];
+
+        const translation = document.createElement("div");
+
+        translation.className = "translation";
+        translation.textContent = item[1];
+
+        phrase.appendChild(translation);
+        phrases.appendChild(phrase);
+
+    });
+
+
+    const themes = document.getElementById("themes");
+
+    themes.innerHTML = "";
+
+    language.themes.forEach(function(theme) {
+
+        const tag = document.createElement("div");
+
+        tag.className = "theme";
+        tag.textContent = theme;
+
+        themes.appendChild(tag);
+
+    });
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function returnToLanguages() {
+
+    document.getElementById("details").classList.remove("visible");
+
+    setTimeout(function() {
+
+        document.getElementById("details").style.display = "none";
+        document.getElementById("catalog").style.display = "block";
+        document.querySelector("header").style.display = "block";
+        document.querySelector(".archive-return").style.display = "block";
+
+    }, 300);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
