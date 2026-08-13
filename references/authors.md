@@ -39,6 +39,36 @@ Darkness, obsession, melancholy and the macabre.
 *Mrs Dalloway · To the Lighthouse*
 
 Memory, consciousness, time and the interior life.
+### Albert Camus
+
+*The Stranger · The Myth of Sisyphus*
+
+Absurdity, freedom, rebellion and the search for meaning
+in a world that offers none.
+
+### Arthur Schopenhauer
+
+*The World as Will and Representation*
+
+Desire, suffering, pessimism and the restless nature of existence.
+
+### Charles Baudelaire
+
+*Les Fleurs du mal*
+
+Beauty, decadence, desire, melancholy and the strange poetry of ruin.
+
+### Søren Kierkegaard
+
+*Either/Or · Fear and Trembling*
+
+Anxiety, faith, choice and the difficulty of becoming oneself.
+
+### Fernando Pessoa
+
+*The Book of Disquiet · Mensagem*
+
+Identity, solitude, multiplicity and the restless interior life.
 
 ---
 
