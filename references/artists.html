@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Artists — Asteren D'Aubray</title>
+
+<style>
+    body {
+        background: #0b0b0b;
+        color: #d6d1c8;
+        font-family: Georgia, serif;
+        margin: 0;
+        padding: 80px 20px;
+    }
+
+    .container {
+        max-width: 750px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 70px;
+    }
+
+    h1 {
+        font-size: 38px;
+        font-weight: normal;
+        letter-spacing: 6px;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-style: italic;
+        opacity: 0.5;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #292929;
+        margin: 55px auto;
+    }
+
+    .category {
+        margin-bottom: 50px;
+    }
+
+    .category-name {
+        font-size: 13px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.45;
+        margin-bottom: 18px;
+    }
+
+    .artist {
+        display: block;
+        width: 100%;
+        background: transparent;
+        color: #d6d1c8;
+        border: 0;
+        border-bottom: 1px solid #242424;
+        padding: 15px 0;
+        font-family: Georgia, serif;
+        font-size: 18px;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .artist:hover {
+        color: white;
+        padding-left: 8px;
+    }
+
+    #details {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    #details.visible {
+        display: block;
+        opacity: 1;
+    }
+
+    .back {
+        display: inline-block;
+        margin-bottom: 45px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.45;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .back:hover {
+        opacity: 1;
+    }
+
+    .artist-name {
+        font-size: 34px;
+        font-weight: normal;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+    }
+
+    .artist-field {
+        font-style: italic;
+        opacity: 0.5;
+        margin-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 12px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        opacity: 0.4;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        color: #bdb8af;
+        font-size: 16px;
+        line-height: 1.9;
+        margin-bottom: 45px;
+    }
+
+    .works {
+        margin-bottom: 50px;
+    }
+
+    .work {
+        padding: 14px 0;
+        border-bottom: 1px solid #242424;
+        font-size: 16px;
+        color: #aaa59d;
+    }
+
+    .themes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+
+    .theme {
+        border: 1px solid #292929;
+        padding: 8px 12px;
+        font-size: 13px;
+        opacity: 0.6;
+    }
+
+    .related {
+        color: #aaa59d;
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 45px;
+    }
+
+    .archive-return {
+        display: block;
+        text-align: center;
+        margin-top: 80px;
+        color: #d6d1c8;
+        text-decoration: none;
+        font-style: italic;
+        opacity: 0.4;
+        transition: 0.3s;
+    }
+
+    .archive-return:hover {
+        opacity: 1;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<div class="container">
+
+```
+<header>
+    <h1>ARTISTS</h1>
+
+    <div class="subtitle">
+        images, forms and visions.
+    </div>
+</header>
+
+
+<!-- ARTIST CATALOG -->
+
+<div id="catalog">
+
+    <div class="category">
+        <div class="category-name">Painting</div>
+
+        <button class="artist" onclick="showArtist('caravaggio')">
+            Caravaggio
+        </button>
+
+        <button class="artist" onclick="showArtist('goya')">
+            Francisco Goya
+        </button>
+
+        <button class="artist" onclick="showArtist('friedrich')">
+            Caspar David Friedrich
+        </button>
+
+        <button class="artist" onclick="showArtist('klimt')">
+            Gustav Klimt
+        </button>
+
+        <button class="artist" onclick="showArtist('munch')">
+            Edvard Munch
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Literature & Visual Arts</div>
+
+        <button class="artist" onclick="showArtist('william-blake')">
+            William Blake
+        </button>
+
+        <button class="artist" onclick="showArtist('rossetti')">
+            Dante Gabriel Rossetti
+        </button>
+
+        <button class="artist" onclick="showArtist('beardsley')">
+            Aubrey Beardsley
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Cinema</div>
+
+        <button class="artist" onclick="showArtist('bergman')">
+            Ingmar Bergman
+        </button>
+
+        <button class="artist" onclick="showArtist('tarkovsky')">
+            Andrei Tarkovsky
+        </button>
+
+        <button class="artist" onclick="showArtist('del-toro')">
+            Guillermo del Toro
+        </button>
+    </div>
+
+
+    <div class="category">
+        <div class="category-name">Architecture</div>
+
+        <button class="artist" onclick="showArtist('gaudi')">
+            Antoni Gaudí
+        </button>
+
+        <button class="artist" onclick="showArtist('le-corbusier')">
+            Le Corbusier
+        </button>
+
+        <button class="artist" onclick="showArtist('wright')">
+            Frank Lloyd Wright
+        </button>
+    </div>
+
+</div>
+
+
+<!-- ARTIST DETAILS -->
+
+<div id="details">
+
+    <a class="back" onclick="returnToArtists()">
+        ← return to artists
+    </a>
+
+    <div class="artist-name" id="name"></div>
+
+    <div class="artist-field" id="field"></div>
+
+    <div class="section-title">about</div>
+
+    <div class="description" id="description"></div>
+
+    <div class="section-title">works & creations</div>
+
+    <div class="works" id="works"></div>
+
+    <div class="section-title">themes</div>
+
+    <div class="themes" id="themes"></div>
+
+    <div class="section-title">related threads</div>
+
+    <div class="related" id="related"></div>
+
+</div>
+
+
+<a class="archive-return" href="index.html">
+    ← return to the archive
+</a>
+```
+
+</div>
+
+<script>
+
+const artists = {
+
+    "caravaggio": {
+        name: "Caravaggio",
+        field: "painter · Baroque",
+        description: "An Italian painter whose dramatic use of light, shadow and human presence transformed Baroque painting. His figures often emerge from darkness with an intense physical and emotional immediacy.",
+        works: [
+            "The Calling of Saint Matthew",
+            "Judith Beheading Holofernes",
+            "The Supper at Emmaus"
+        ],
+        themes: ["light", "shadow", "violence", "religion", "humanity"],
+        related: "The contrast between darkness and illumination, the physicality of the human figure and the transformation of ordinary people into subjects of sacred art."
+    },
+
+    "goya": {
+        name: "Francisco Goya",
+        field: "painter · printmaker",
+        description: "A Spanish artist whose work moved between court portraiture, social observation and increasingly dark explorations of violence, fear, irrationality and human suffering.",
+        works: [
+            "The Third of May 1808",
+            "Saturn Devouring His Son",
+            "The Sleep of Reason Produces Monsters"
+        ],
+        themes: ["war", "fear", "irrationality", "violence", "dreams"],
+        related: "The unstable boundary between reason and nightmare, and the use of art to confront the darker aspects of human existence."
+    },
+
+    "friedrich": {
+        name: "Caspar David Friedrich",
+        field: "painter · Romanticism",
+        description: "A German Romantic painter known for solitary figures, vast landscapes and scenes in which nature becomes a space for contemplation and the sublime.",
+        works: [
+            "Wanderer above the Sea of Fog",
+            "The Sea of Ice",
+            "Monk by the Sea"
+        ],
+        themes: ["sublime", "solitude", "nature", "mortality", "contemplation"],
+        related: "The individual confronted with immense landscapes, uncertainty and the overwhelming scale of nature."
+    },
+
+    "klimt": {
+        name: "Gustav Klimt",
+        field: "painter · Symbolism · Art Nouveau",
+        description: "An Austrian painter whose highly decorative compositions combine symbolism, ornament and sensual human figures with an interest in intimacy, mortality and transformation.",
+        works: [
+            "The Kiss",
+            "Portrait of Adele Bloch-Bauer I",
+            "Death and Life"
+        ],
+        themes: ["beauty", "symbolism", "love", "mortality", "ornament"],
+        related: "The tension between beauty and mortality, decoration and meaning, intimacy and the symbolic."
+    },
+
+    "munch": {
+        name: "Edvard Munch",
+        field: "painter · printmaker · Expressionism",
+        description: "A Norwegian artist whose emotionally charged images explore anxiety, loneliness, love, illness and mortality through distorted forms and intense psychological atmosphere.",
+        works: [
+            "The Scream",
+            "Madonna",
+            "The Sick Child"
+        ],
+        themes: ["anxiety", "loneliness", "death", "love", "psychology"],
+        related: "The visual expression of inner states and the transformation of psychological experience into symbolic form."
+    },
+
+    "william-blake": {
+        name: "William Blake",
+        field: "poet · artist · printmaker",
+        description: "An English poet and visual artist who combined poetry, engraving and visionary imagery. His work frequently challenges conventional morality and explores innocence, experience, imagination and spirituality.",
+        works: [
+            "Songs of Innocence and of Experience",
+            "The Marriage of Heaven and Hell",
+            "Jerusalem"
+        ],
+        themes: ["imagination", "innocence", "experience", "spirituality", "vision"],
+        related: "The relationship between poetry and image, and the idea that imagination can reveal realities hidden by ordinary perception."
+    },
+
+    "rossetti": {
+        name: "Dante Gabriel Rossetti",
+        field: "poet · painter · Pre-Raphaelite",
+        description: "An English poet and painter associated with the Pre-Raphaelite movement, known for symbolic imagery, medieval influences, beauty and themes of love, longing and mortality.",
+        works: [
+            "Beata Beatrix",
+            "Proserpine",
+            "The Blessed Damozel"
+        ],
+        themes: ["beauty", "love", "mythology", "death", "symbolism"],
+        related: "The meeting of poetry, painting and medieval symbolism, especially through recurring images of love, loss and myth."
+    },
+
+    "beardsley": {
+        name: "Aubrey Beardsley",
+        field: "illustrator · writer · designer",
+        description: "An English illustrator whose distinctive black-and-white style became associated with decadence, Art Nouveau and the aesthetic movement.",
+        works: [
+            "The illustrations for Salome",
+            "The Yellow Book",
+            "The Rape of the Lock illustrations"
+        ],
+        themes: ["decadence", "line", "ornament", "satire", "aestheticism"],
+        related: "The use of stylized line, darkness and ornament to create images that are simultaneously elegant, strange and unsettling."
+    },
+
+    "bergman": {
+        name: "Ingmar Bergman",
+        field: "filmmaker · screenwriter",
+        description: "A Swedish filmmaker whose cinema repeatedly explores faith, silence, identity, mortality, relationships and the psychological isolation of individuals.",
+        works: [
+            "The Seventh Seal",
+            "Persona",
+            "Wild Strawberries"
+        ],
+        themes: ["faith", "death", "identity", "silence", "existence"],
+        related: "The confrontation between the individual and questions that cannot be resolved through certainty, especially faith, mortality and identity."
+    },
+
+    "tarkovsky": {
+        name: "Andrei Tarkovsky",
+        field: "filmmaker · writer",
+        description: "A Russian filmmaker known for contemplative pacing, spiritual themes, memory, dreams and philosophical approaches to time and human existence.",
+        works: [
+            "Stalker",
+            "Solaris",
+            "Mirror"
+        ],
+        themes: ["memory", "time", "faith", "dreams", "existence"],
+        related: "Cinema as a space for contemplation, where memory, dreams and physical landscapes become extensions of the inner world."
+    },
+
+    "del-toro": {
+        name: "Guillermo del Toro",
+        field: "filmmaker · writer · artist",
+        description: "A Mexican filmmaker whose work combines fantasy, horror and historical settings with recurring themes of innocence, monstrosity, grief and transformation.",
+        works: [
+            "Pan's Labyrinth",
+            "The Shape of Water",
+            "Crimson Peak"
+        ],
+        themes: ["monsters", "transformation", "innocence", "grief", "fantasy"],
+        related: "The monster as a figure of otherness and empathy, and fantasy as a way of approaching violence, memory and human vulnerability."
+    },
+
+    "gaudi": {
+        name: "Antoni Gaudí",
+        field: "architect · Modernisme",
+        description: "A Catalan architect whose buildings combine organic forms, structural experimentation, religious symbolism and elaborate decorative detail.",
+        works: [
+            "Sagrada Família",
+            "Park Güell",
+            "Casa Batlló"
+        ],
+        themes: ["nature", "religion", "organic forms", "symbolism", "architecture"],
+        related: "Architecture transformed into something organic and symbolic, where structure, nature and spirituality become inseparable."
+    },
+
+    "le-corbusier": {
+        name: "Le Corbusier",
+        field: "architect · designer · urban planner",
+        description: "A Swiss-French architect and theorist who profoundly influenced modern architecture through ideas concerning functionality, geometry, urban planning and new forms of living.",
+        works: [
+            "Villa Savoye",
+            "Unité d'Habitation",
+            "Notre-Dame du Haut"
+        ],
+        themes: ["modernism", "geometry", "function", "space", "urbanism"],
+        related: "The relationship between architecture, modern life and the organization of space around human needs."
+    },
+
+    "wright": {
+        name: "Frank Lloyd Wright",
+        field: "architect · designer",
+        description: "An American architect known for organic architecture, integrating buildings with their surroundings and emphasizing continuity between interior and exterior spaces.",
+        works: [
+            "Fallingwater",
+            "Robie House",
+            "Guggenheim Museum"
+        ],
+        themes: ["nature", "space", "organic architecture", "harmony", "modernism"],
+        related: "Architecture as an extension of its environment, dissolving the boundary between constructed space and nature."
+    }
+
+};
+
+
+function showArtist(artistId) {
+
+    const artist = artists[artistId];
+
+    document.getElementById("catalog").style.display = "none";
+    document.querySelector("header").style.display = "none";
+    document.querySelector(".archive-return").style.display = "none";
+
+    document.getElementById("details").style.display = "block";
+
+    setTimeout(function() {
+        document.getElementById("details").classList.add("visible");
+    }, 20);
+
+    document.getElementById("name").textContent = artist.name;
+    document.getElementById("field").textContent = artist.field;
+    document.getElementById("description").textContent = artist.description;
+    document.getElementById("related").textContent = artist.related;
+
+    const works = document.getElementById("works");
+
+    works.innerHTML = "";
+
+    artist.works.forEach(function(work) {
+
+        const item = document.createElement("div");
+
+        item.className = "work";
+        item.textContent = work;
+
+        works.appendChild(item);
+
+    });
+
+
+    const themes = document.getElementById("themes");
+
+    themes.innerHTML = "";
+
+    artist.themes.forEach(function(theme) {
+
+        const tag = document.createElement("div");
+
+        tag.className = "theme";
+        tag.textContent = theme;
+
+        themes.appendChild(tag);
+
+    });
+
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function returnToArtists() {
+
+    document.getElementById("details").classList.remove("visible");
+
+    setTimeout(function() {
+
+        document.getElementById("details").style.display = "none";
+        document.getElementById("catalog").style.display = "block";
+        document.querySelector("header").style.display = "block";
+        document.querySelector(".archive-return").style.display = "block";
+
+    }, 300);
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
+
+</body>
+</html>
